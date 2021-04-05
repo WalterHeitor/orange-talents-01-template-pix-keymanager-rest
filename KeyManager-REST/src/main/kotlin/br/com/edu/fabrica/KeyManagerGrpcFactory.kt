@@ -1,5 +1,6 @@
 package br.com.edu.fabrica
 
+import br.com.edu.KeyManagerCarregaGRPCServiceGrpc
 import br.com.edu.KeyManagerListaGRPCServiceGrpc
 import br.com.edu.KeyManagerRegistraGRPCServiceGrpc
 import br.com.edu.KeyManagerRemoveGRPCServiceGrpc
@@ -20,5 +21,5 @@ class KeyManagerGrpcFactory (@GrpcChannel("keyManager") val channel: ManagedChan
     fun listaChave() = KeyManagerListaGRPCServiceGrpc.newBlockingStub(channel)
 
     @Singleton
-    fun carregaChave() = KeyManagerListaGRPCServiceGrpc.newBlockingStub(channel)
+    fun carregaChave() = KeyManagerCarregaGRPCServiceGrpc.newBlockingStub(channel)
 }
