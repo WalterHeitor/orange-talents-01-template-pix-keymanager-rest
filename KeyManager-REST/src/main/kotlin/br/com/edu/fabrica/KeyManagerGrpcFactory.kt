@@ -14,10 +14,10 @@ class KeyManagerGrpcFactory (@GrpcChannel("keyManager") val channel: ManagedChan
     fun registraChave() = KeyManagerRegistraGRPCServiceGrpc.newBlockingStub(channel)
 
     @Singleton
-    fun deletaChave() = KeyManagerRemoveGRPCServiceGrpc.newFutureStub(channel)
+    fun deletaChave() = KeyManagerRemoveGRPCServiceGrpc.newBlockingStub(channel)
 
     @Singleton
-    fun listaChave() = KeyManagerListaGRPCServiceGrpc.newFutureStub(channel)
+    fun listaChave() = KeyManagerListaGRPCServiceGrpc.newBlockingStub(channel)
 
     @Singleton
     fun carregaChave() = KeyManagerListaGRPCServiceGrpc.newBlockingStub(channel)

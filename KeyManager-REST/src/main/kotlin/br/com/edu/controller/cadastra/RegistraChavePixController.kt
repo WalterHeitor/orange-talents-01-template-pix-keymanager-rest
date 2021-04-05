@@ -1,6 +1,6 @@
 package br.com.edu.controller.cadastra
 
-import br.com.edu.KeyManagerCarregaGRPCServiceGrpc
+
 import br.com.edu.KeyManagerRegistraGRPCServiceGrpc
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Body
@@ -14,7 +14,7 @@ import javax.validation.Valid
 
 @Validated
 @Controller("/api/v1/clientes/{clienteId}")
-class ReristaChavePixController(@Inject private val regirstraChaveClient:
+class RegistraChavePixController(@Inject private val regirstraChaveClient:
                                 KeyManagerRegistraGRPCServiceGrpc.KeyManagerRegistraGRPCServiceBlockingStub) {
     private val LOGGER = LoggerFactory.getLogger(this::class.java)
 
