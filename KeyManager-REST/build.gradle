@@ -48,6 +48,20 @@ dependencies {
     implementation("org.hibernate:hibernate-validator:6.1.6.Final") //anotacao do hibernate
 
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+
+
+    compile 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+
+    testAnnotationProcessor "io.micronaut:micronaut-inject-java"
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("io.micronaut.test:micronaut-test-junit5:2.3.3")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+}
+
+
+// use JUnit 5 platform
+test {
+    useJUnitPlatform()
 }
 
 
